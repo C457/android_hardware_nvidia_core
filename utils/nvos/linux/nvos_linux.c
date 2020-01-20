@@ -2447,7 +2447,7 @@ NvS32 NvOsAtomicExchange32(NvS32 *pTarget, NvS32 Value)
     return __sync_lock_test_and_set(pTarget, Value);
 #elif NVCPU_IS_X86
     __asm__ __volatile__("lock; xchgl %0,%1"
-                         : "=r"((unsigned long)Value)
+                         : "=r"(Value)
                          : "m"(*((volatile unsigned long*)pTarget)),
                            "0"((unsigned long)Value)
                          : "memory");
@@ -2480,7 +2480,7 @@ NvS32 NvOsAtomicExchangeAdd32(NvS32 *pTarget, NvS32 Value)
    return __sync_fetch_and_add(pTarget, Value);
 #elif NVCPU_IS_X86
     __asm__ __volatile__("lock; xaddl %0,%1"
-                         : "=r" ((unsigned long)Value)
+                         : "=r" (Value)
                          : "m"(*((volatile unsigned long*)pTarget)),
                            "0"((unsigned long)Value)
                          : "memory");
