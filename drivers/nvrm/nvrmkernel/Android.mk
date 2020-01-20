@@ -20,12 +20,14 @@ LOCAL_CFLAGS += -DNVRM_TRANSPORT_IN_KERNEL=1
 
 ifeq ($(TARGET_TEGRA_FAMILY), t11x)
 LOCAL_CFLAGS += -DTARGET_SOC_T11X
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../t11x
 endif
 ifeq ($(TARGET_TEGRA_FAMILY), t12x)
 LOCAL_CFLAGS += -DTARGET_SOC_T12X
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../t12x
 endif
 
-LOCAL_C_INCLUDES := \
+LOCAL_C_INCLUDES += \
     hardware/nvidia/core-headers \
     $(LOCAL_PATH)/core/common \
     external/valgrind/main/include \
