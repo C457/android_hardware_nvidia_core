@@ -2740,7 +2740,7 @@ typedef struct
 } UnwindState;
 
 static
-_Unwind_Reason_Code UnwindCallback(_Unwind_Context* context, void* arg)
+_Unwind_Reason_Code UnwindCallback(struct _Unwind_Context* context, void* arg)
 {
     UnwindState* state = arg;
     if (state->count)
