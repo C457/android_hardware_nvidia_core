@@ -14,7 +14,7 @@
 #include "nvrm_chipid.h"
 
 #ifndef NV_IS_AVP
-#define NV_IS_AVP=0
+#define NV_IS_AVP 0
 #endif
 
 // Size of a subtile in bytes
