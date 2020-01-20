@@ -26,6 +26,7 @@ LOCAL_CFLAGS += -DTARGET_SOC_T12X
 endif
 
 LOCAL_C_INCLUDES := \
+    hardware/nvidia/core-headers \
     $(LOCAL_PATH)/core/common \
     external/valgrind/main/include \
     external/valgrind/main/memcheck
