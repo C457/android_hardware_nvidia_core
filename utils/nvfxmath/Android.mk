@@ -4,6 +4,8 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := libnvfxmath
 
+LOCAL_C_INCLUDES := hardware/nvidia/core-headers
+
 LOCAL_SRC_FILES := \
     sincos.c \
     fxconv_arm.S \
