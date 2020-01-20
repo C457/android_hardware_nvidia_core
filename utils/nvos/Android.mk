@@ -21,6 +21,8 @@ COMMON_SRC_FILES := \
     nvos_trace.c \
     nvos_file.c
 
+COMMON_C_INCLUDES := hardware/nvidia/core-headers
+
 # linux usermode implementation
 
 include $(CLEAR_VARS)
@@ -38,6 +40,8 @@ LOCAL_CFLAGS += -DBUILD_FOR_COSIM
 endif
 
 LOCAL_CFLAGS += -DUNIFIED_SCALING=1
+
+LOCAL_C_INCLUDES += $(COMMON_C_INCLUDES)
 
 LOCAL_SRC_FILES += \
     $(COMMON_SRC_FILES) \
@@ -70,6 +74,8 @@ LOCAL_MODULE := libnvos
 # Advanced debug feature disabled until Bug 950465 fixed
 LOCAL_CFLAGS += -DNVOS_ADVANCED_DEBUG=0
 LOCAL_CFLAGS += -UANDROID
+
+LOCAL_C_INCLUDES += $(COMMON_C_INCLUDES)
 
 LOCAL_SRC_FILES += \
     $(COMMON_SRC_FILES) \
