@@ -57,6 +57,8 @@ LOCAL_SRC_FILES := \
     null_stubs/nvrm_pwm_stub.c \
     null_stubs/nvrm_spi_stub.c
 
-LOCAL_SHARED_LIBRARIES := libnvos libcutils libmd5
+LOCAL_SHARED_LIBRARIES := libnvos libcutils
+
+LOCAL_STATIC_LIBRARIES := libmd5
 
 include $(BUILD_SHARED_LIBRARY)
