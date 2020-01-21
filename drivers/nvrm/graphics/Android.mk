@@ -7,8 +7,9 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libnvrm_graphics
 
 LOCAL_C_INCLUDES := \
-    hardware/nvidia/core-headers \
+    $(LOCAL_PATH)/../ \
     $(LOCAL_PATH)/../nvrmkernel/core/common \
+    hardware/nvidia/core-headers \
     system/core/include
 
 LOCAL_SRC_FILES := \
