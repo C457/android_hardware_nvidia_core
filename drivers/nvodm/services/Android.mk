@@ -14,6 +14,8 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := libnvodm_services
 
+LOCAL_C_INCLUDES := hardware/nvidia/core-headers
+
 LOCAL_SRC_FILES := \
     nvodm_services.c \
     nvodm_services_dev_i2c.c \
