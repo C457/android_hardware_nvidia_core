@@ -11,6 +11,7 @@ LOCAL_PATH := $(call my-dir)
 
 _local_subdirs := \
         nvrm \
-        nvodm
+        nvodm \
+        nvtestio
 
 include $(addprefix $(LOCAL_PATH)/, $(addsuffix /Android.mk, $(_local_subdirs)))
